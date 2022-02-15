@@ -1,0 +1,70 @@
+{
+  "projectType": "application",
+  "root": "apps/store-web-app",
+  "sourceRoot": "apps/store-web-app/src",
+  "tags": ["web-store"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/store-web-app",
+        "compiler": "babel",
+        "index": "apps/store-web-app/src/index.html",
+        "baseHref": "/",
+        "main": "apps/store-web-app/src/main.ts",
+        "polyfills": "apps/store-web-app/src/polyfills.ts",
+        "tsConfig": "apps/store-web-app/tsconfig.app.json",
+        "assets": [
+          "apps/store-web-app/src/favicon.ico",
+          "apps/store-web-app/src/assets"
+        ],
+        "styles": ["apps/store-web-app/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/store-web-app/src/environments/environment.ts",
+              "with": "apps/store-web-app/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "store-web-app:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "store-web-app:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/store-web-app/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/store-web-app"],
+      "options": {
+        "jestConfig": "apps/store-web-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

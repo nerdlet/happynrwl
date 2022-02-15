@@ -1,7 +1,19 @@
 {
   "version": 2,
   "projects": {
+    "shared-ui": "libs/shared-ui",
+    "store": "apps/store",
+    "store-angular-app": "apps/store-angular-app",
+    "store-angular-app-e2e": "apps/store-angular-app-e2e",
+    "store-e2e": "apps/store-e2e",
+    "store-ui-shared": "libs/store/ui-shared",
+    "store-web-app": "apps/store-web-app",
+    "store-web-app-e2e": "apps/store-web-app-e2e",
     "todo": "apps/todo",
-    "todo-e2e": "apps/todo-e2e"
+    "todo-e2e": "apps/todo-e2e",
+    "ui-ui-footer": "libs/ui/ui-footer",
+    "ui-ui-header": "libs/ui/ui-header",
+    "ui-ui-typography": "libs/ui/ui-typography",
+    "utils-utils-stringify": "libs/utils/utils-stringify"
   }
 }

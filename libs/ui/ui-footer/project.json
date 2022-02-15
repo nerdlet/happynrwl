@@ -1,0 +1,23 @@
+{
+  "root": "libs/ui/ui-footer",
+  "sourceRoot": "libs/ui/ui-footer/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/ui-footer/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/ui-footer"],
+      "options": {
+        "jestConfig": "libs/ui/ui-footer/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@happynrwl/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@happynrwl/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
+      "@happynrwl/ui/ui-footer": ["libs/ui/ui-footer/src/index.ts"],
+      "@happynrwl/ui/ui-header": ["libs/ui/ui-header/src/index.ts"],
+      "@happynrwl/ui/ui-typography": ["libs/ui/ui-typography/src/index.ts"],
+      "@happynrwl/utils/utils-stringify": [
+        "libs/utils/utils-stringify/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

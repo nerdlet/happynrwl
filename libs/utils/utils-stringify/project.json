@@ -1,0 +1,23 @@
+{
+  "root": "libs/utils/utils-stringify",
+  "sourceRoot": "libs/utils/utils-stringify/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/utils/utils-stringify/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/utils/utils-stringify"],
+      "options": {
+        "jestConfig": "libs/utils/utils-stringify/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
